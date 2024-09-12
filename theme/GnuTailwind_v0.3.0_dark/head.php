@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="dropdown">
           <a href="#" class="dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             <!-- <i class="bi bi-globe"></i> 지구본 아이콘 사용 -->
-            <span style="font-size: 1em;">한국어</span>
+            <span style="font-size: 1em;">English</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="languageDropdown">
             <li><a class="dropdown-item" href="?lang=ko">한국어</a></li>
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <a href="<?php echo G5_BBS_URL ?>/login.php" class="pl-4">로그인</a>
       <?php }  ?> -->
       <i class="bi bi-phone inline-flex items-center ml-4">
-        <a href="<?php echo G5_URL ?>/#new-idea"><span style="font-style: normal"> 앱다운로드</span></a>
+        <a href="<?php echo G5_URL ?>/#new-idea"><span style="font-style: normal">App Download</span></a>
       </i>
     </div>
   </div>
@@ -236,23 +236,23 @@ document.addEventListener('DOMContentLoaded', function() {
               $i++;
             }   //end foreach $row
             if ($i == 0) {  ?>
-                <div class="text-center">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?>
+                <div class="text-center">Preparing menu items<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">You can set it in Admin Mode &gt; Preferences &gt; Menu Settings</a><?php } ?>
                 </div>
               <?php } else { ?>
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
                   <button @click="open = !open" class="flex flex-row items-center w-full px-3 py-1 mt-2 text-left rounded-lg lg:w-auto lg:inline lg:mt-0 hover:text-indigo-900 focus:text-indigo-900 hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline text-base">
-                    <span>고객지원</span>
+                    <span>Community</span>
                     <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 transition-transform duration-200 transform lg:-mt-1">
                       <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                   </button>
                   <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg lg:w-48">
                     <div class="dropdownItem px-2 py-2 rounded-md shadow relative z-50">
-                      <a class="block px-4 py-1 mb-0.5 rounded-lg hover:text-black focus:text-blxk hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="<?php echo G5_URL ?>/notice" target="_<?php echo $row2['me_target']; ?>">공지사항</a>
-                      <a class="block px-4 py-1 mb-0.5 rounded-lg hover:text-black focus:text-blxk hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="<?php echo G5_URL ?>/webzine" target="_<?php echo $row2['me_target']; ?>">소식·이벤트</a>
-                      <a class="block px-4 py-1 mb-0.5 rounded-lg hover:text-black focus:text-blxk hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="<?php echo G5_URL ?>/qa" target="_<?php echo $row2['me_target']; ?>">온라인 문의</a>
-                      <!-- <a class="block px-4 py-1 mb-0.5 rounded-lg hover:text-black focus:text-blxk hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="<?php echo G5_BBS_URL ?>/new.php" target="_<?php echo $row2['me_target']; ?>">새글</a> -->
-                      <a class="block px-4 py-1 mb-0.5 rounded-lg hover:text-black focus:text-blxk hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="<?php echo G5_BBS_URL ?>/current_connect.php" target="_<?php echo $row2['me_target']; ?>">현재접속자 수<?php echo connect('theme/basic'); ?></a>
+                      <a class="block px-4 py-1 mb-0.5 rounded-lg hover:text-black focus:text-blxk hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="<?php echo G5_URL ?>/notice" target="_<?php echo $row2['me_target']; ?>">Notice</a>
+                      <a class="block px-4 py-1 mb-0.5 rounded-lg hover:text-black focus:text-blxk hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="<?php echo G5_URL ?>/webzine" target="_<?php echo $row2['me_target']; ?>">News·Event</a>
+                      <a class="block px-4 py-1 mb-0.5 rounded-lg hover:text-black focus:text-blxk hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="<?php echo G5_URL ?>/qa" target="_<?php echo $row2['me_target']; ?>">Q&A</a>
+                      <!-- <a class="block px-4 py-1 mb-0.5 rounded-lg hover:text-black focus:text-blxk hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="<?php echo G5_BBS_URL ?>/new.php" target="_<?php echo $row2['me_target']; ?>">News</a> -->
+                      <a class="block px-4 py-1 mb-0.5 rounded-lg hover:text-black focus:text-blxk hover:bg-indigo-200 focus:bg-indigo-200 focus:outline-none focus:shadow-outline" href="<?php echo G5_BBS_URL ?>/current_connect.php" target="_<?php echo $row2['me_target']; ?>">Current<?php echo connect('theme/basic'); ?></a>
                     </div>
                   </div>
                 </div>
@@ -284,15 +284,15 @@ document.addEventListener('DOMContentLoaded', function() {
       <form name="fsearchbox" method="get" action="<?php echo G5_BBS_URL ?>/search.php" onsubmit="return fsearchbox_submit(this);">
         <input type="hidden" name="sfl" value="wr_subject||wr_content">
         <input type="hidden" name="sop" value="and">
-        <label for="sch_stx" class="sr-only">검색어 필수</label>
-        <input id="searchfield" type="text" name="stx" id="sch_stx" placeholder="검색어를 입력해주세요" maxlength="20" autofocus="autofocus" class="mr-2 text-grey-800 bg-white transition focus:outline-none p-2 appearance-none leading-normal text-base border">
-        <button type="submit" id="sch_submit" value="검색" class="text-lg"><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">검색</span></button>
+        <label for="sch_stx" class="sr-only">Search term required</label>
+        <input id="searchfield" type="text" name="stx" id="sch_stx" placeholder="Please enter your search term" maxlength="20" autofocus="autofocus" class="mr-2 text-grey-800 bg-white transition focus:outline-none p-2 appearance-none leading-normal text-base border">
+        <button type="submit" id="sch_submit" value="Search" class="text-lg"><i class="fa fa-search" aria-hidden="true"></i><span class="sr-only">검색</span></button>
       </form>
 
       <script>
         function fsearchbox_submit(f) {
           if (f.stx.value.length < 2) {
-            alert("검색어는 두글자 이상 입력하십시오.");
+            alert("Please enter at least two letters for your search term.");
             f.stx.select();
             f.stx.focus();
             return false;
@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
 
           if (cnt > 1) {
-            alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+            alert("For faster searching, you can only enter one space in your search term.");
             f.stx.select();
             f.stx.focus();
             return false;

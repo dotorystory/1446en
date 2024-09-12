@@ -32,7 +32,7 @@ header("Pragma: no-cache"); // HTTP/1.0
 ?>
 
 <!doctype html>
-<html lang="ko" class="light">
+<html lang="en" class="light">
 
 <head>
   <meta charset="utf-8">
@@ -108,10 +108,10 @@ header("Pragma: no-cache"); // HTTP/1.0
   <?php
   if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.
     $sr_admin_msg = '';
-    if ($is_admin == 'super') $sr_admin_msg = "최고관리자 ";
-    else if ($is_admin == 'group') $sr_admin_msg = "그룹관리자 ";
-    else if ($is_admin == 'board') $sr_admin_msg = "게시판관리자 ";
+    if ($is_admin == 'super') $sr_admin_msg = "Administrator ";
+    else if ($is_admin == 'group') $sr_admin_msg = "Group Admin ";
+    else if ($is_admin == 'board') $sr_admin_msg = "Board Admin ";
 
-    echo '<div id="hd_login_msg" class="sr-only">' . $sr_admin_msg . get_text($member['mb_nick']) . '님 로그인 중 ';
+    echo '<div id="hd_login_msg" class="sr-only">' . $sr_admin_msg . get_text($member['mb_nick']) . ' is logging in ';
     echo '<a href="' . G5_BBS_URL . '/logout.php">로그아웃</a></div>';
   }
